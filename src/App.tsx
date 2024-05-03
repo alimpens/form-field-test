@@ -5,6 +5,7 @@ import "@amsterdam/design-system-assets/font/index.css";
 import "@amsterdam/design-system-css/dist/index.css";
 import {
   Alert,
+  AlertProps,
   Button,
   Checkbox,
   Fieldset,
@@ -30,7 +31,10 @@ type ErrorSummaryProps = {
   errors: { id: string; message: string }[];
 };
 
-const ErrorSummary = ({ className, errors }: ErrorSummaryProps) => {
+const ErrorSummary = ({
+  className,
+  errors,
+}: AlertProps & ErrorSummaryProps) => {
   return (
     <Alert
       className={className}
@@ -107,7 +111,9 @@ export default function App() {
   const formattedErrors =
     errors &&
     Object.keys(errors).map((key) => ({
+      // @ts-expect-error: not an issue
       id: `#${errors[key].ref.id}`,
+      // @ts-expect-error: not an issue
       message: errors[key].message,
     }));
 
