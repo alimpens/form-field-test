@@ -152,7 +152,9 @@ export default function App() {
             )}
             <TextArea
               id="input1"
-              aria-describedby={`description1 ${errors.example1 && "error1"}`}
+              aria-describedby={`description1${
+                errors.example1 ? " error1" : ""
+              }`}
               aria-invalid={Boolean(errors.example1)}
               aria-required="true"
               {...register("example1", {
@@ -190,7 +192,9 @@ export default function App() {
             )}
             <TextArea
               id="input2"
-              aria-describedby={`description2 ${errors.example2 && "error2"}`}
+              aria-describedby={`description2${
+                errors.example2 ? "error2" : ""
+              }`}
               aria-invalid={errors.example2 ? "true" : "false"}
               aria-required="true"
               {...register("example2", {
@@ -206,7 +210,7 @@ export default function App() {
 
           <CustomFieldset
             legend="Waar gaat uw melding over?"
-            aria-describedby={`description3 ${errors.radio && "error3"}`}
+            aria-describedby={`description3${errors.radio ? "error3" : ""}`}
             role="radiogroup"
             aria-required="true"
             hasError={Boolean(errors.radio)}
@@ -255,7 +259,7 @@ export default function App() {
 
           <CustomFieldset
             legend="Waar gaat uw melding over 2?"
-            aria-describedby={`description4 ${errors.checkbox && "error4"}`}
+            aria-describedby={`description4${errors.checkbox ? "error4" : ""}`}
             hasError={Boolean(errors.checkbox)}
           >
             <Paragraph id="description4" size="small">
