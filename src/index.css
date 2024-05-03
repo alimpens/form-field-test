@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.ams-error.ams-error {
+  --ams-paragraph-color: var(--ams-color-primary-red);
+}
+
+.form-field__has-error,
+.fieldset__has-error {
+  border-inline-start: 3px solid var(--ams-color-primary-red);
+  padding-inline-start: var(--ams-space-inside-md);
+}
