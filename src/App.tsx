@@ -161,7 +161,7 @@ export default function App() {
                 required: "Dit is een verplicht veld",
                 maxLength: {
                   value: 20,
-                  message: "U heeft teveel tekens gebruikt",
+                  message: "U heeft te veel tekens gebruikt",
                 },
               })}
               dir="auto" // TODO: dit in component zelf verwerken
@@ -201,7 +201,7 @@ export default function App() {
                 required: "Dit is een verplicht veld",
                 maxLength: {
                   value: 20,
-                  message: "U heeft teveel tekens gebruikt",
+                  message: "U heeft te veel tekens gebruikt",
                 },
               })}
               dir="auto" // TODO: dit in component zelf verwerken
